@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "EcoVoiturage2.0",
+    "slug": "EcoVoiturage2.0",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "EcoVoiturage2.0"
+}
