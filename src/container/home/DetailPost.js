@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert, Button, Text,StyleSheet, SafeAreaView,TextInput, ScrollView, ActivityIndicator,Image, View } from 'react-native';
+import { Alert, Button, Text,StyleSheet, SafeAreaView,TextInput, ScrollView, ActivityIndicator,Image, View   } from 'react-native';
 import firebase from 'firebase'
 import "firebase/firestore";
 import { ListItem } from "react-native-elements";
@@ -12,6 +12,8 @@ import {
   TouchableRipple,
 
 } from 'react-native-paper';
+
+
 
 export class DetailPost extends Component {
     constructor(props){
@@ -61,6 +63,7 @@ export class DetailPost extends Component {
   }
 
   render() {
+
     if(this.state.isLoading){
       return(
         <View style={styles.preloader}>
@@ -143,6 +146,9 @@ export class DetailPost extends Component {
                         <Image source={require('../../../assets/time.png')} style={styles.avatar} />
                             <Text style={{ color: "#777777", marginLeft: 20 }}>{this.state.time}</Text>
                         </View>
+                        <View style={styles.containerb}>
+                        <Button title={"Reserver"} onPress={()=>this.navigation.navigate("reserve")} />
+                    </View>
                     </View>
                 </SafeAreaView>
             </ScrollView>
@@ -156,6 +162,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor:"white"
+    },
+    containerb: {
+        flex: 1,
+        justifyContent: "space-around",
+        alignItems: "center"
     },
     userInfoSection: {
         paddingHorizontal: 20,

@@ -15,6 +15,7 @@ import AddVehiculScreen from '../container/home/AddVehiculScreen';
 import ListVehicul from '../container/home/ListVehicul';
 import AddChauffeurScreen from '../container/home/AddChauffeurScreen';
 import ListChauffeur from '../container/home/ListChauffeur';
+import Reserve from '../container/home/Reserve';
 
 
 const Stack = createNativeStackNavigator();
@@ -47,6 +48,27 @@ const FeedStack = () => {
         }}
       />
       <Stack.Screen name="AddPost" component={AddPost}
+        options={{
+          headerTitleStyle: {
+            color: '#fff',
+            fontFamily: 'Kufam-SemiBoldItalic',
+            fontSize: 28,
+            top: 10
+          },
+          headerStyle: {
+            shadowColor: '#fff',
+            elevation: 0,
+            backgroundColor: '#3f51b5',
+            height: 90,
+            elevation: 0.0,
+            borderBottomRightRadius: 15,
+            borderBottomLeftRadius: 15,
+            marginRight: 5
+          },
+
+        }}
+      />
+            <Stack.Screen name="reserve" component={Reserve}
         options={{
           headerTitleStyle: {
             color: '#fff',
